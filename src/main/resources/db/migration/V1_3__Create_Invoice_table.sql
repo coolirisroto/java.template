@@ -1,0 +1,21 @@
+CREATE TABLE Invoice(
+    id SERIAL PRIMARY KEY,
+    parentId character varying NULL,
+    billingDate date NOT NULL,
+    currency character varying NULL,
+    invoiceNumber character varying NULL,
+    pages integer NULL,
+    notes character varying NULL,
+    subtotal numeric NOT NULL,
+    tax numeric NOT NULL,
+    total numeric NOT NULL,
+    invoiceTypeId integer NOT NULL,
+    productId integer NOT NULL,
+    senderId integer NOT NULL,
+    receiverId integer NOT NULL,
+    invoiceAffiliateConfigId integer NOT NULL,
+    paymentInformation TEXT NULL,
+    paymentConditions TEXT NULL,
+    createdAt TIMESTAMP NOT NULL DEFAULT NOW(),
+    updatedAt TIMESTAMP NOT NULL DEFAULT NOW()
+);
